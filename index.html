@@ -255,7 +255,7 @@ span{
   justify-content: center;
   font-size: 1.6rem;
   line-height: 1.6;
-  margin-left: 50;
+  margin-left: 20;
   text-align: center;
 }
 
@@ -358,6 +358,58 @@ span{
     background-color: #EC4899;
      margin-top: 20px;
 }
+
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255,255, 255, .1);
+  box-shadow: 0 25px 45px rgba(0,0, 0, .2);
+    padding: 20px;
+    border-radius: 8px;
+   
+}
+
+.get{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-gap: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 10px;
+    }
+}
 </style>
   </head>
 
@@ -424,8 +476,8 @@ span{
      
       <div class="ripara">
         <h3 class="heading">Get to know me!</h3>
-        <p>Hello!👋 I'm <strong>Babu Natarajan</strong>, an aspiring front-end developer passionate about crafting delightful and intuitive digital experiences.</p><br>
-        <p>I'm <strong>Frontend Focused Web Developer</strong>. I have a strong foundation in <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, and I'm proficient in utilizing modern frameworks like <strong>React</strong>. <br> <br> I'm constantly expanding my knowledge by exploring new technologies and frameworks, eager to learn from experienced <br>developers and contribute my skills to a team environment. <br><br> Check out some of my work in the <strong>Projects</strong> section.</p>
+        <p>Hello!👋 I'm <strong>Babu Natarajan</strong>, an aspiring front-end developer passionate about crafting delightful and intuitive digital experiences.</p>
+        <p>I'm <strong>Frontend Focused Web Developer</strong>. I have a strong foundation in <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, and I'm proficient in utilizing modern frameworks like <strong>React</strong>.<br> I'm constantly expanding my knowledge by exploring new technologies and frameworks, eager to learn from experienced <br>developers and contribute my skills to a team environment. <br> Check out some of my work in the <strong>Projects</strong> section.</p>
       </div>
     </div>
     <div class="right">
@@ -479,6 +531,23 @@ span{
         <button id="next">></button>
         <button id="prev"><</button>
     </div>
+</div>
+
+
+<div class="container">
+  <h2 class="get">Contact Us</h2>
+  <form action="babunatarajan43@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <input type="submit" value="Send">
+  </form>
 </div>
 <script >
     function showSidebar(){
