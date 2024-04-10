@@ -260,10 +260,11 @@ span{
 }
 
 .right {
-    display: flex;
+  display: inline;
   justify-content: center;
   font-size: 1.6rem;
   line-height: 1.6;
+  margin-top: 30px;
 }
 
 .contentskills {
@@ -280,10 +281,21 @@ span{
 }
 
 .skill {
-  padding: 5px;
+  padding: 10px;
+  background: rgba(255,255, 255, .1);
+  box-shadow: 0 25px 45px rgba(0,0, 0, .2);
+  height: 40px;
+ width: fit-content;
+ border-radius: 10px;
+ margin-bottom: 20px;
 }
-.rititle{
-   
+.ms{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.heading{
+    margin-bottom: 50px;
 }
 </style>
   </head>
@@ -350,13 +362,15 @@ span{
     <div class="left">
      
       <div class="ripara">
-        <p>Hello!👋 I'm <strong>Babu Natarajan</strong>, an aspiring front-end developer passionate about crafting delightful and intuitive digital experiences.</p>
-        <p>I'm <strong>Frontend Focused Web Developer</strong>. I have a strong foundation in <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, and I'm proficient in utilizing modern frameworks like <strong>React</strong>. I'm constantly expanding my knowledge by exploring new technologies and frameworks, eager to learn from experienced developers and contribute my skills to a team environment. Check out some of my work in the <strong>Projects</strong> section.</p>
+        <h3 class="heading">Get to know me!</h3>
+        <p>Hello!👋 I'm <strong>Babu Natarajan</strong>, an aspiring front-end developer passionate about crafting delightful and intuitive digital experiences.</p><br>
+        <p>I'm <strong>Frontend Focused Web Developer</strong>. I have a strong foundation in <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, and I'm proficient in utilizing modern frameworks like <strong>React</strong>. <br> <br> I'm constantly expanding my knowledge by exploring new technologies and frameworks, eager to learn from experienced <br>developers and contribute my skills to a team environment. <br><br> Check out some of my work in the <strong>Projects</strong> section.</p>
       </div>
     </div>
     <div class="right">
       <div class="contentskills">
         <h3 class="MySkills"></h3>
+        <h3 class="ms">My Skills</h3>
         <div class="Skills">
           <div class="skill">HTML</div>
           <div class="skill">CSS</div>
