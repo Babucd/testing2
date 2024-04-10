@@ -297,6 +297,66 @@ span{
 .heading{
     margin-bottom: 50px;
 }
+
+.pro{
+  display: flex;
+  justify-content: center;
+}
+
+/**/
+.total{
+    
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+.slider{
+    position: relative;
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+}
+.item{
+    position: absolute;
+    width: 200px;
+    height: 320px;
+    text-align: justify;
+    background: rgba(255,255, 255, .1);
+  box-shadow: 0 25px 45px rgba(0,0, 0, .2);
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 110px);
+    top: 0;
+}
+#next, #prev{
+    position: absolute;
+    top: 40%;
+    color: #151414;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 400px;
+}
+#next{
+    left: unset;
+    right: 400px;
+}
+.btnfor{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+    background-color: #EC4899;
+     margin-top: 20px;
+}
 </style>
   </head>
 
@@ -383,11 +443,42 @@ span{
       </div>
     </div>
   </div>
-  
-  
+
+  <h1 class="pro">Project</h1>
   
 
- </div>
+
+  <div class="total">
+    <div class="slider">
+        <div class="item">
+            <h3>Whac a Mole game</h3>
+           <img src="./project1.png" alt=""> 
+           
+           <div class="btnfor" onclick="window.location.href='https://babucd.github.io/new-game-file/'">Check Out</div>
+        </div>
+        <div class="item">
+            <h3>personal <br>portfolio website</h3>
+           <img src="./project2.png" alt=""> 
+           
+           <div class="btnfor" onclick="window.location.href='https://babucd.github.io/new-game-file/'">Check Out</div>
+        </div>
+        <div class="item">
+            <h3>Hello World</h3>
+            
+           
+           <div class="btnfor" onclick="window.location.href='https:#'">soon</div>
+        </div>
+        <div class="item">
+            <h3>Hello World</h3>
+           
+           
+           <div class="btnfor" onclick="window.location.href='https:#'">soon</div>
+        </div>
+        
+        <button id="next">></button>
+        <button id="prev"><</button>
+    </div>
+</div>
 <script >
     function showSidebar(){
     const sidebar = document.querySelector('.sidebar')
@@ -397,7 +488,43 @@ span{
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none'
   }
-  
+  // next  
+  let items = document.querySelectorAll('.slider .item');
+    let next = document.getElementById('next');
+    let prev = document.getElementById('prev');
+    
+    let active = 3;
+    function loadShow(){
+        let stt = 0;
+        items[active].style.transform = `none`;
+        items[active].style.zIndex = 1;
+        items[active].style.filter = 'none';
+        items[active].style.opacity = 1;
+        for(var i = active + 1; i < items.length; i++){
+            stt++;
+            items[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+            items[i].style.zIndex = -stt;
+            items[i].style.filter = 'blur(5px)';
+            items[i].style.opacity = stt > 2 ? 0 : 0.6;
+        }
+        stt = 0;
+        for(var i = active - 1; i >= 0; i--){
+            stt++;
+            items[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+            items[i].style.zIndex = -stt;
+            items[i].style.filter = 'blur(5px)';
+            items[i].style.opacity = stt > 2 ? 0 : 0.6;
+        }
+    }
+    loadShow();
+    next.onclick = function(){
+        active = active + 1 < items.length ? active + 1 : active;
+        loadShow();
+    }
+    prev.onclick = function(){
+        active = active - 1 >= 0 ? active - 1 : active;
+        loadShow();
+    }
 </script>
 
   
