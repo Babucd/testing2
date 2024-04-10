@@ -12,7 +12,7 @@
   body{
     height: 100%;
     width: 100%;
-   background: linear-gradient(45deg,#e7031e,#5240d5,#ed891f);
+   ?background: linear-gradient(45deg,#e7031e,#5240d5,#ed891f);
     background-size: 300% 300%;
    animation:color 12s ease-in-out infinite;
 }
@@ -148,10 +148,10 @@
 @media only screen and (min-width: 600px) {
   .h1{
   font-weight: 800;
-  font-size: 70px;
+  font-size: 80px;
 }
 .ptag {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   text-align: center;
   width: 100%;
   line-height: 1.6;
@@ -185,7 +185,7 @@ box-sizing: inherit;
    
   display: flex;
   color: black;
-  height: 60px;
+  height: 80px;
   width: 100px;
  align-items: center;
  background: rgba(255,255, 255, .1);
@@ -193,10 +193,11 @@ box-sizing: inherit;
  justify-content: center;   
   margin: auto;
   margin-top:55px;
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 10px;
   
 }
+
 } /* this the end of */
 span{
     color: aliceblue;
@@ -205,15 +206,15 @@ span{
    
        display: flex;
        color: black;
-       height: 60px;
-       width: 100px;
+       height: 80px;
+       width: 130px;
       align-items: center;
       background: rgba(255,255, 255, .1);
       box-shadow: 0 25px 45px rgba(0,0, 0, .2);
       justify-content: center;   
        margin: auto;
        margin-top:55px;
-       font-size: 20px;
+       font-size: 25px;
        border-radius: 10px;
 }
 .aboutme{
@@ -224,36 +225,66 @@ span{
       align-items: center;
       justify-content: center;   
        margin: auto;
-       margin-top:100px;
+       margin-top:130px;
        font-size:19px;
        
 }
 .do{
   display: flex;
   justify-content: center;
-}
-.main{
-  margin-top: 40px;
-  height: 300px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
+}
 
- 
+.left, .right {
+  height: 100vh;
+  padding: 20px;
+}
+
+.left {
+
+    margin-top: 50;
+    display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-left: 50;
+  text-align: center;
+}
+
+.right {
+    display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.contentskills {
+  padding: 20px;
+}
+
+.MySkills {
+  margin-top: 0;
+}
+
+.Skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.skill {
+  padding: 5px;
 }
 .rititle{
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-   height: 40px;
-  width: 50%;
-
+   
 }
-.ripara{
-
- display: flex;
- justify-content: center;
- text-align: center;
- width: 50%;
-} 
 </style>
   </head>
 
@@ -315,19 +346,33 @@ span{
   <h4>ABOUT ME</h4></div>
   <p class="do">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
  
- <div class="main">
-  <div class="ri">
-    <h4 class="rititle">Get to know me!</h4></div>
-    <div class="ripara">
-    <p > 
-      Hello!👋 I'm <strong>Babu Natarajan</strong>  ,an aspiring front-end developer passionate <br>about crafting delightful and intuitive digital experiences.
-         <br> I'm  <strong>Frontend Focused Web Developer</strong> I have a strong foundation <br> in <strong>HTML, CSS, </strong>and<strong>JavaScript</strong>  , and I'm proficient in utilizing modern <br>
-           frameworks like <strong>React</strong> ,
-           and I'm constantly expanding my knowledge <br> by exploring new technologies and frameworks.  eager to learn from experienced developers and contribute my skills to a team environment.
-    </p>
+  <div class="grid-container">
+    <div class="left">
+     
+      <div class="ripara">
+        <p>Hello!👋 I'm <strong>Babu Natarajan</strong>, an aspiring front-end developer passionate about crafting delightful and intuitive digital experiences.</p>
+        <p>I'm <strong>Frontend Focused Web Developer</strong>. I have a strong foundation in <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, and I'm proficient in utilizing modern frameworks like <strong>React</strong>. I'm constantly expanding my knowledge by exploring new technologies and frameworks, eager to learn from experienced developers and contribute my skills to a team environment. Check out some of my work in the <strong>Projects</strong> section.</p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="contentskills">
+        <h3 class="MySkills"></h3>
+        <div class="Skills">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">Bootstrap</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">React</div>
+          <div class="skill">Github</div>
+          <div class="skill">Java</div>
+        </div>
+      </div>
+    </div>
   </div>
-  </div>
-  <div class="le"></div>
+  
+  
+  
+
  </div>
 <script >
     function showSidebar(){
